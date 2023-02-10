@@ -15,8 +15,9 @@
         "root": true
     },
     "jest": {
-        "testPathIgnorePatterns": [
-            "generator-exercise/"
-        ]
+        "testEnvironment": "jsdom"
+    },
+    "dependencies": {
+        "jest-environment-jsdom": "^29.4.2"
     }
 }
