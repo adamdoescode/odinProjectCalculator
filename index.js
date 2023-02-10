@@ -32,7 +32,10 @@ function generateOperators() {
 }
 
 function handleClick() {
-    console.log('clicked');
+    // take in the value of the cell
+    // add it to the display
+    const display = document.querySelector('.displayInput');
+    display.textContent += this.textContent;
 }
 
 function addClickHandle() {
