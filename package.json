@@ -5,8 +5,9 @@
         "eslint": "^7.26.0",
         "eslint-config-airbnb-base": "^14.2.1",
         "eslint-plugin-import": "^2.22.1",
-        "jest": "^26.6.3",
-        "jest-cli": "^26.6.3"
+        "jest": "^28.1.2",
+        "jest-cli": "^26.6.3",
+        "jest-environment-jsdom": "^28.1.2"
     },
     "scripts": {
         "test": "jest"
@@ -15,8 +16,13 @@
         "root": true
     },
     "jest": {
-        "testPathIgnorePatterns": [
-            "generator-exercise/"
+        "testEnvironment": "jsdom"
+    },
+    "testEnvironmentOptions": {
+        "browsers": [
+            "chrome",
+            "firefox",
+            "safari"
         ]
     }
 }

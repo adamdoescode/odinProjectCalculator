@@ -1,7 +1,16 @@
 
-// jest testing of calculator.js
+ // jest testing of calculator.js
+/**
+ * @jest-environment jsdom
+ */
 
-const calculator = require('./calculator');
+ test('use jsdom in this test file', () => {
+    const element = document.createElement('div');
+    expect(element).not.toBeNull();
+  });
+
+
+const calculator = require('./index');
 
 test('add 1 + 2 to equal 3', () => {
     expect(calculator.add(1, 2)).toBe(3);
