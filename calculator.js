@@ -28,5 +28,5 @@ function operate(operator, ...args) {
 }
 
 module.exports = {
-    add, subtract, multiply, divide
+    add, subtract, multiply, divide, operate
 }
