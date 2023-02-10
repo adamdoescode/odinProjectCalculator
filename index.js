@@ -35,5 +35,15 @@ function handleClick() {
     console.log('clicked');
 }
 
+function addClickHandle() {
+    // adds click handle to everything that hass cell class
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach((cell) => {
+        cell.addEventListener('click', handleClick);
+    })
+}
+
 generateNumbers();
 generateOperators();
+// call this function AFTER generating all cells
+addClickHandle();
