@@ -89,14 +89,25 @@ function handleClick() {
         translateForOperate();
         return;
     }
-    //check if operator symbol in text
-    if (operators.includes(this.textContent)) {
-        // add a space before + after each input
-        display.textContent += ` ${this.textContent} `;
+    const displayArray = display.textContent.split(' ');
+    while (displayArray.length <= 3) {
+        //check if operator symbol in text
+        if (operators.includes(this.textContent)) {
+            // check if an operator is already present
+            if (operators.some((operator) => display.textContent.includes(operator))) {
+                //if yes, we calculate and then add the new operator
+                translateForOperate();
+                display.textContent += ` ${this.textContent} `;
+                return;
+            } else {
+                // add a space before + after each input
+                display.textContent += ` ${this.textContent} `;
+                return;
+            }
+        }
+        display.textContent += this.textContent;
         return;
     }
-    display.textContent += this.textContent;
-    return;
 }
 
 function translateForOperate() {
