@@ -35,7 +35,17 @@ function handleClick() {
     // take in the value of the cell
     // add it to the display
     const display = document.querySelector('.displayInput');
+    // clear screen if text == "Clear"
+    if (this.textContent == 'Clear') {
+        clearScreen();
+        return;
+    }
     display.textContent += this.textContent;
+}
+
+function clearScreen() {
+    const display = document.querySelector('.displayInput');
+    display.textContent = '';
 }
 
 function addClickHandle() {
