@@ -1,0 +1,43 @@
+
+.calculatorDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.numbersDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+/* zero cell behaves differently */
+.zeroCell {
+    width: 100px;
+    height: 304px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.operators {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
