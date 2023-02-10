@@ -138,8 +138,12 @@ function addClickHandle() {
     return;
 }
 
-generateNumbers();
-generateOperators();
-// call this function AFTER generating all cells
-addClickHandle();
+function generateCalculator() {
+    generateNumbers();
+    generateOperators();
+    // call this function AFTER generating all cells
+    addClickHandle();
+}
+
+generateCalculator();
 
